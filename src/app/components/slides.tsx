@@ -612,13 +612,13 @@ export const SlidePrototypesWhy = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-        className="rounded-2xl bg-white p-6 shadow-md border border-neutral-200"
+        className="rounded-2xl bg-white p-6 shadow-md border border-neutral-200 flex flex-col"
       >
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-4">
           <ThumbsUp className="w-9 h-9" style={{ color: "#1A7340" }} />
           <div style={{ fontWeight: 600, fontSize: "2.1rem" }}>Why the traditional works</div>
         </div>
-        <div className="space-y-2 text-neutral-700" style={{ fontSize: "1.65rem" }}>
+        <div className="flex-1 flex flex-col justify-around text-neutral-700" style={{ fontSize: "1.85rem" }}>
           {[
             "Familiar UX — no learning curve",
             "Clear progress signal",
@@ -629,9 +629,9 @@ export const SlidePrototypesWhy = () => (
               key={s}
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0, transition: { delay: 0.4 + i * 0.08 } }}
-              className="flex gap-2"
+              className="flex gap-3"
             >
-              <CheckCircle2 className="w-6 h-6 mt-0.5" style={{ color: "#1A7340" }} /> {s}
+              <CheckCircle2 className="w-7 h-7 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
             </motion.div>
           ))}
         </div>
@@ -640,13 +640,13 @@ export const SlidePrototypesWhy = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
-        className="rounded-2xl bg-[#1A7340] text-white p-6 shadow-xl"
+        className="rounded-2xl bg-[#1A7340] text-white p-6 shadow-xl flex flex-col"
       >
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-4">
           <ThumbsUp className="w-9 h-9" />
           <div style={{ fontWeight: 600, fontSize: "2.1rem" }}>Why the unconventional works</div>
         </div>
-        <div className="space-y-2" style={{ fontSize: "1.65rem" }}>
+        <div className="flex-1 flex flex-col justify-around" style={{ fontSize: "1.85rem" }}>
           {[
             "Storytelling holds attention — fights skip behaviour",
             "Visible road = built-in Zeigarnik pull",
@@ -657,9 +657,9 @@ export const SlidePrototypesWhy = () => (
               key={s}
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0, transition: { delay: 0.5 + i * 0.08 } }}
-              className="flex gap-2"
+              className="flex gap-3"
             >
-              <CheckCircle2 className="w-6 h-6 mt-0.5" /> {s}
+              <CheckCircle2 className="w-7 h-7 mt-0.5 shrink-0" /> {s}
             </motion.div>
           ))}
         </div>
