@@ -318,7 +318,7 @@ export const SlideEarlyIdeas = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 1.1 } }}
-        className="mt-6 text-neutral-600 max-w-3xl"
+        className="mt-6 text-neutral-600"
         style={{ fontSize: "1.75rem" }}
       >
         These were <em>radical</em> innovations — they assumed data and scale PicApp doesn't yet have.
@@ -1169,6 +1169,48 @@ export const SlideReflection = () => (
   </SlideShell>
 );
 
+// 15 — Final Q&A slide
+export const SlideQA = () => (
+  <SlideShell bg="from-[#EBF5EE] via-white to-[#EBF5EE]">
+    <div className="flex-1 flex items-center gap-16">
+      {/* Left side - Title */}
+      <div className="flex-1 flex flex-col justify-center">
+        <motion.h2
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0, transition: { delay: 0.2 } }}
+          style={{ fontSize: "7rem", fontWeight: 700, lineHeight: 1, color: "#0F2419" }}
+          className="mb-6"
+        >
+          Questions?
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 0.4 } }}
+          className="text-neutral-600"
+          style={{ fontSize: "2.5rem" }}
+        >
+          Scan to visit our site
+        </motion.p>
+      </div>
+
+      {/* Right side - QR Code */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1, transition: { delay: 0.6, type: "spring", stiffness: 100 } }}
+        className="rounded-3xl bg-white p-6 shadow-2xl border-4 border-[#1A7340]"
+      >
+        <img
+          src="/src/imports/0yHXpQ.png"
+          alt="QR Code"
+          className="w-auto"
+          style={{ height: "calc(100vh - 180px)", maxHeight: "800px" }}
+        />
+      </motion.div>
+    </div>
+  </SlideShell>
+);
+
 export const slides = [
   SlideCover,
   SlideData,
@@ -1181,6 +1223,7 @@ export const slides = [
   SlideVideo,
   SlideCode,
   SlideTeamwork,
+  SlideQA,
 ];
 
 export const slideTitles = [
@@ -1195,4 +1238,5 @@ export const slideTitles = [
   "Prototype demo",
   "We coded it",
   "How we worked",
+  "Questions?",
 ];
