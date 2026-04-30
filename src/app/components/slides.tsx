@@ -135,7 +135,7 @@ export const SlideCover = () => {
     ["Felicia", "Borås · SE", "Client liaison · problem definition & analysis"],
   ];
   return (
-    <SlideShell bg="from-green-700 via-emerald-600 to-teal-500">
+    <SlideShell bg="from-[#0F2419] via-[#1A7340] to-[#7DC493]">
       <div className="flex-1 flex flex-col justify-center text-white">
         <motion.div className="flex items-center gap-3 mb-6" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
           <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 3, repeat: Infinity }}>
@@ -211,7 +211,7 @@ export const SlideProblem = () => (
       className="mt-3 max-w-4xl"
     >
       Users sign up. And then —{" "}
-      <span className="text-rose-600">nothing.</span>
+      <span style={{ color: "#1A7340" }}>nothing.</span>
     </motion.h2>
 
     <motion.p
@@ -235,7 +235,7 @@ export const SlideProblem = () => (
           animate={{ opacity: 1, y: 0, transition: { delay: 0.5 + i * 0.12 } }}
           className="rounded-2xl bg-white p-6 shadow-md border border-rose-100"
         >
-          <AlertTriangle className="w-6 h-6 text-rose-500 mb-3" />
+          <AlertTriangle className="w-6 h-6 mb-3" style={{ color: "#1A7340" }} />
           <div style={{ fontWeight: 600, fontSize: "1.1rem" }}>{t}</div>
           <div className="text-sm text-neutral-600 mt-1">{s}</div>
         </motion.div>
@@ -266,8 +266,7 @@ export const SlideData = () => (
           className="rounded-2xl bg-white p-6 shadow-md border border-amber-100"
         >
           <motion.div
-            style={{ fontSize: "3rem", fontWeight: 700, lineHeight: 1 }}
-            className="text-amber-600"
+            style={{ fontSize: "3rem", fontWeight: 700, lineHeight: 1, color: "#1A7340" }}
             initial={{ scale: 0.5 }}
             animate={{ scale: 1, transition: { delay: 0.4 + i * 0.1, type: "spring" } }}
           >
@@ -294,7 +293,7 @@ export const SlideEarlyIdeas = () => {
     <SlideShell bg="from-sky-50 via-white to-indigo-50">
       <Eyebrow color="sky">Phase 1 — Broad ideation</Eyebrow>
       <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "3rem", fontWeight: 600 }} className="mt-3">
-        We had big ideas. <span className="text-sky-600">Most didn't survive.</span>
+        We had big ideas. <span style={{ color: "#1A7340" }}>Most didn't survive.</span>
       </motion.h2>
 
       <div className="mt-10 grid grid-cols-3 gap-4 flex-1">
@@ -307,7 +306,7 @@ export const SlideEarlyIdeas = () => {
             className="rounded-2xl bg-white p-5 shadow-md border border-sky-100 relative"
           >
             <div className="flex items-center gap-2 mb-2">
-              <Lightbulb className="w-5 h-5 text-sky-500" />
+              <Lightbulb className="w-5 h-5" style={{ color: "#1A7340" }} />
               <div style={{ fontWeight: 600 }}>{it.t}</div>
             </div>
             <div className="text-sm text-neutral-600">{it.why}</div>
@@ -337,7 +336,7 @@ export const SlideStepBack = () => (
   <SlideShell bg="from-neutral-50 via-white to-violet-50">
     <Eyebrow color="violet">The crisis meeting</Eyebrow>
     <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "3rem", fontWeight: 600, lineHeight: 1.05 }} className="mt-3 max-w-4xl">
-      More features ≠ more active users — <span className="text-violet-600">without user understanding.</span>
+      More features ≠ more active users — <span style={{ color: "#1A7340" }}>without user understanding.</span>
     </motion.h2>
 
     <div className="mt-12 grid grid-cols-2 gap-8 flex-1">
@@ -347,7 +346,7 @@ export const SlideStepBack = () => (
         className="rounded-3xl bg-white p-8 shadow-xl border border-violet-100"
       >
         <div className="flex items-center gap-3 mb-4">
-          <RefreshCw className="w-6 h-6 text-violet-600" />
+          <RefreshCw className="w-6 h-6" style={{ color: "#1A7340" }} />
           <div style={{ fontSize: "1.5rem", fontWeight: 600 }}>Our shift</div>
         </div>
         <div className="space-y-4">
@@ -365,7 +364,7 @@ export const SlideStepBack = () => (
               animate={{ opacity: 1, x: 0, transition: { delay: 0.5 + i * 0.1 } }}
               className="flex gap-3"
             >
-              <div className={`text-xs uppercase tracking-wider w-12 ${k === "From" ? "text-rose-500" : "text-emerald-600"}`} style={{ fontWeight: 600 }}>
+              <div className="text-xs uppercase tracking-wider w-12" style={{ fontWeight: 600, color: k === "From" ? "#DC2626" : "#1A7340" }}>
                 {k}
               </div>
               <div className="text-neutral-700">{v}</div>
@@ -407,7 +406,7 @@ export const SlideStepBack = () => (
 
 // 6 — Realization: no onboarding
 export const SlideRealization = () => (
-  <SlideShell bg="from-emerald-600 via-emerald-500 to-teal-500">
+  <SlideShell bg="from-[#1A7340] via-[#1A7340] to-[#7DC493]">
     <div className="flex-1 flex flex-col justify-center text-white">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs uppercase tracking-[0.3em] opacity-80">
         The realization
@@ -449,13 +448,13 @@ export const SlideWhy = () => {
     <SlideShell bg="from-violet-50 via-white to-emerald-50">
       <Eyebrow color="violet">Why onboarding?</Eyebrow>
       <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "2.75rem", fontWeight: 600 }} className="mt-3">
-        Two theories. <span className="text-emerald-600">One clear direction.</span>
+        Two theories. <span style={{ color: "#1A7340" }}>One clear direction.</span>
       </motion.h2>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-        className="mt-5 rounded-xl bg-rose-600 text-white px-5 py-3 shadow-md flex items-center gap-4"
+        className="mt-5 rounded-xl bg-[#DC2626] text-white px-5 py-3 shadow-md flex items-center gap-4"
       >
         <div className="flex items-center gap-1.5 text-xs uppercase tracking-widest opacity-90 shrink-0">
           <AlertTriangle className="w-3.5 h-3.5" />
@@ -483,13 +482,13 @@ export const SlideWhy = () => {
           className="rounded-2xl bg-white p-7 shadow-md border border-violet-100 flex flex-col"
         >
           <div className="flex items-center gap-3 mb-2">
-            <Brain className="w-7 h-7 text-violet-600" />
+            <Brain className="w-7 h-7" style={{ color: "#1A7340" }} />
             <div style={{ fontWeight: 600, fontSize: "1.35rem" }}>Self-Determination Theory</div>
           </div>
           <div className="text-xs text-neutral-500 mb-4">Deci & Ryan, 1985</div>
           <div className="grid grid-cols-3 gap-2 text-sm mb-4">
             {["Autonomy", "Competence", "Relatedness"].map((n) => (
-              <div key={n} className="bg-violet-50 text-violet-700 rounded-lg p-2.5 text-center" style={{ fontWeight: 600 }}>{n}</div>
+              <div key={n} className="bg-[#EBF5EE] rounded-lg p-2.5 text-center" style={{ fontWeight: 600, color: "#1A7340" }}>{n}</div>
             ))}
           </div>
           <div className="text-sm text-neutral-700">
@@ -500,14 +499,14 @@ export const SlideWhy = () => {
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0, transition: { delay: 0.4 } }}
-          className="rounded-2xl bg-white p-7 shadow-md border border-fuchsia-100 flex flex-col"
+          className="rounded-2xl bg-white p-7 shadow-md border border-[#F5F3FF] flex flex-col"
         >
           <div className="flex items-center gap-3 mb-2">
-            <Compass className="w-7 h-7 text-fuchsia-600" />
+            <Compass className="w-7 h-7 text-[#7C3AED]" />
             <div style={{ fontWeight: 600, fontSize: "1.35rem" }}>The Zeigarnik Effect</div>
           </div>
           <div className="text-xs text-neutral-500 mb-4">Zeigarnik, 1927</div>
-          <div className="bg-fuchsia-50 text-fuchsia-700 rounded-lg p-3 text-sm mb-4" style={{ fontWeight: 600 }}>
+          <div className="bg-[#F5F3FF] text-[#7C3AED] rounded-lg p-3 text-sm mb-4" style={{ fontWeight: 600 }}>
             Unfinished tasks pull us forward.
           </div>
           <div className="text-sm text-neutral-700">
@@ -519,7 +518,7 @@ export const SlideWhy = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.7 } }}
-        className="mt-5 rounded-xl bg-emerald-600 text-white px-5 py-3 shadow-md flex items-center gap-3"
+        className="mt-5 rounded-xl bg-[#1A7340] text-white px-5 py-3 shadow-md flex items-center gap-3"
       >
         <Sparkles className="w-5 h-5 shrink-0" />
         <div className="text-sm">
@@ -577,7 +576,7 @@ export const SlidePrototypesShow = () => (
         initial={{ opacity: 0, x: 40, rotate: 3 }}
         animate={{ opacity: 1, x: 0, rotate: 2, transition: { delay: 0.3 } }}
         whileHover={{ rotate: 0, scale: 1.02 }}
-        className="rounded-3xl bg-emerald-600 text-white shadow-2xl p-6 flex flex-col"
+        className="rounded-3xl bg-[#1A7340] text-white shadow-2xl p-6 flex flex-col"
       >
         <div className="flex items-center justify-between mb-3">
           <div className="text-xs uppercase tracking-widest opacity-80">Prototype 2</div>
@@ -615,7 +614,7 @@ export const SlidePrototypesWhy = () => (
   <SlideShell bg="from-amber-50 via-white to-emerald-50">
     <Eyebrow color="amber">Client feedback</Eyebrow>
     <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "3rem", fontWeight: 600 }} className="mt-3">
-      Per liked both. <span className="text-emerald-600">"Combine them."</span>
+      Per liked both. <span style={{ color: "#1A7340" }}>"Combine them."</span>
     </motion.h2>
 
     <div className="mt-10 grid grid-cols-2 gap-6 flex-1">
@@ -625,7 +624,7 @@ export const SlidePrototypesWhy = () => (
         className="rounded-2xl bg-white p-6 shadow-md border border-neutral-200"
       >
         <div className="flex items-center gap-2 mb-3">
-          <ThumbsUp className="w-5 h-5 text-emerald-600" />
+          <ThumbsUp className="w-5 h-5" style={{ color: "#1A7340" }} />
           <div style={{ fontWeight: 600, fontSize: "1.25rem" }}>Why the traditional works</div>
         </div>
         <div className="space-y-2 text-sm text-neutral-700">
@@ -641,7 +640,7 @@ export const SlidePrototypesWhy = () => (
               animate={{ opacity: 1, x: 0, transition: { delay: 0.4 + i * 0.08 } }}
               className="flex gap-2"
             >
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5" /> {s}
+              <CheckCircle2 className="w-4 h-4 mt-0.5" style={{ color: "#1A7340" }} /> {s}
             </motion.div>
           ))}
         </div>
@@ -650,7 +649,7 @@ export const SlidePrototypesWhy = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
-        className="rounded-2xl bg-emerald-600 text-white p-6 shadow-xl"
+        className="rounded-2xl bg-[#1A7340] text-white p-6 shadow-xl"
       >
         <div className="flex items-center gap-2 mb-3">
           <ThumbsUp className="w-5 h-5" />
@@ -679,7 +678,8 @@ export const SlidePrototypesWhy = () => (
     <motion.blockquote
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1 } }}
-      className="mt-6 border-l-4 border-emerald-500 pl-6 italic text-neutral-700 max-w-3xl"
+      className="mt-6 border-l-4 pl-6 italic text-neutral-700 max-w-3xl"
+      style={{ borderLeftColor: "#1A7340" }}
     >
       "I like both — can you combine them?"
       <span className="not-italic text-sm text-neutral-500 ml-2">— Per Anders Hovbom</span>
@@ -717,7 +717,7 @@ export const SlideMerged = () => {
         animate={{ opacity: 1, x: 0, transition: { delay: 0.6 } }}
         className="absolute top-0 right-8 h-full flex items-center z-10"
       >
-        <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-300 bg-white">
+        <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-[#7DC493] bg-white">
           <img
             src="/src/imports/image.png"
             alt="Live prototype"
@@ -732,7 +732,7 @@ export const SlideMerged = () => {
         <div className="flex items-center gap-3">
           <Eyebrow color="emerald">The merged prototype</Eyebrow>
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1, transition: { delay: 0.2 } }}>
-            <GitMerge className="w-5 h-5 text-emerald-600" />
+            <GitMerge className="w-5 h-5" style={{ color: "#1A7340" }} />
           </motion.div>
         </div>
         <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "3rem", fontWeight: 600 }} className="mt-3 mb-6">
@@ -744,7 +744,7 @@ export const SlideMerged = () => {
           <svg viewBox="0 0 300 600" className="absolute inset-0 w-full h-full">
             <motion.path
               d="M 60 40 Q 90 90, 70 140 Q 50 190, 80 240 Q 110 290, 85 340 Q 60 390, 85 440 Q 110 490, 90 540"
-              stroke="#10b981"
+              stroke="#1A7340"
               strokeWidth="6"
               fill="none"
               strokeLinecap="round"
@@ -813,7 +813,7 @@ export const SlideMerged = () => {
             ["Decisive ending", "Setup complete — start exploring"],
           ].map(([t, s]) => (
             <div key={t} className="bg-white/60 rounded-lg p-2 backdrop-blur flex gap-2">
-              <div style={{ fontWeight: 600 }} className="text-emerald-700">•</div>
+              <div style={{ fontWeight: 600, color: "#1A7340" }}>•</div>
               <div>
                 <span style={{ fontWeight: 600 }} className="text-neutral-800">{t}:</span> {s}
               </div>
@@ -842,7 +842,7 @@ export const SlideVideo = () => (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1, transition: { delay: 0.4 } }}
-        className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-emerald-500"
+        className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-[#1A7340]"
         style={{ height: "calc(100% - 80px)", width: "auto" }}
       >
         <video
@@ -879,7 +879,7 @@ export const SlideCode = () => (
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 + i * 0.12 } }}
           className="rounded-2xl bg-white p-6 shadow-md border border-neutral-200 flex flex-col"
         >
-          <Code2 className={`w-8 h-8 text-${t.c}-600 mb-3`} />
+          <Code2 className="w-8 h-8 mb-3" style={{ color: "#1A7340" }} />
           <div style={{ fontSize: "2rem", fontWeight: 700 }}>{t.n}</div>
           <div className="text-sm text-neutral-600 mt-2">{t.d}</div>
         </motion.div>
@@ -889,7 +889,7 @@ export const SlideCode = () => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.7 } }}
-      className="mt-8 rounded-2xl bg-neutral-900 text-emerald-300 p-6 font-mono text-sm shadow-xl"
+      className="mt-8 rounded-2xl bg-[#0F2419] text-[#7DC493] p-6 font-mono text-sm shadow-xl"
     >
       <div className="flex items-center gap-2 text-neutral-400 text-xs mb-3">
         <span className="ml-2">OnboardingRoad.vue</span>
@@ -936,7 +936,7 @@ export const SlideTeamwork = () => (
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
         className="rounded-2xl bg-white p-6 shadow-md border border-emerald-100"
       >
-        <div className="text-xs uppercase tracking-widest text-emerald-700 mb-3">What worked</div>
+        <div className="text-xs uppercase tracking-widest mb-3" style={{ color: "#1A7340" }}>What worked</div>
         <div className="space-y-2 text-sm text-neutral-700">
           {[
             "Strong, open communication",
@@ -945,7 +945,7 @@ export const SlideTeamwork = () => (
             "Iterative cycles late in the project",
           ].map((s) => (
             <div key={s} className="flex gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> {s}
+              <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
             </div>
           ))}
         </div>
@@ -956,7 +956,7 @@ export const SlideTeamwork = () => (
         animate={{ opacity: 1, y: 0, transition: { delay: 0.35 } }}
         className="rounded-2xl bg-white p-6 shadow-md border border-amber-100"
       >
-        <div className="text-xs uppercase tracking-widest text-amber-700 mb-3">What was hard</div>
+        <div className="text-xs uppercase tracking-widest mb-3" style={{ color: "#1A7340" }}>What was hard</div>
         <div className="space-y-2 text-sm text-neutral-700">
           {[
             "Open brief — slow to find direction",
@@ -965,7 +965,7 @@ export const SlideTeamwork = () => (
             "Late client validation on early ideas",
           ].map((s) => (
             <div key={s} className="flex gap-2">
-              <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" /> {s}
+              <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
             </div>
           ))}
         </div>
@@ -1126,14 +1126,14 @@ export const SlideClosing = () => (
         animate={{ x: "calc(100vw - 60px)" }}
         transition={{ duration: 5, ease: "easeOut" }}
       >
-        <Car className="w-10 h-10 text-emerald-200" />
+        <Car className="w-10 h-10" style={{ color: "#7DC493" }} />
       </motion.div>
       <motion.div
         className="absolute top-1/2 right-12 -translate-y-1/2"
         initial={{ scale: 0 }}
         animate={{ scale: 1, transition: { delay: 4.5 } }}
       >
-        <Flag className="w-10 h-10 text-amber-300" />
+        <Flag className="w-10 h-10" style={{ color: "#1A7340" }} />
       </motion.div>
     </div>
   </SlideShell>
@@ -1154,20 +1154,20 @@ export const SlideReflection = () => (
         className="rounded-2xl bg-white border border-sky-200 p-8 shadow-xl max-w-4xl"
       >
         <div className="flex items-center gap-3 mb-6">
-          <RefreshCw className="w-7 h-7 text-sky-600" />
-          <div style={{ fontWeight: 600, fontSize: "1.5rem" }} className="text-sky-800">What we'd do differently</div>
+          <RefreshCw className="w-7 h-7" style={{ color: "#1A7340" }} />
+          <div style={{ fontWeight: 600, fontSize: "1.5rem", color: "#0F2419" }}>What we'd do differently</div>
         </div>
         <div className="space-y-4 text-neutral-700" style={{ fontSize: "1.15rem", lineHeight: 1.6 }}>
           <div className="flex gap-3">
-            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
+            <div className="shrink-0" style={{ fontSize: "1.5rem", color: "#1A7340" }}>•</div>
             <div>Establish a clearer project plan early and follow it more consistently</div>
           </div>
           <div className="flex gap-3">
-            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
+            <div className="shrink-0" style={{ fontSize: "1.5rem", color: "#1A7340" }}>•</div>
             <div>Have more frequent internal meetings to improve alignment</div>
           </div>
           <div className="flex gap-3">
-            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
+            <div className="shrink-0" style={{ fontSize: "1.5rem", color: "#1A7340" }}>•</div>
             <div>Spend more time defining the problem before moving into ideation, to avoid exploring ideas that aren't feasible in this context</div>
           </div>
         </div>
