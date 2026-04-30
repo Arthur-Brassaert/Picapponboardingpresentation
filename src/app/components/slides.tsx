@@ -1143,77 +1143,31 @@ export const SlideClosing = () => (
 export const SlideReflection = () => (
   <SlideShell bg="from-sky-50 via-white to-violet-50">
     <Eyebrow color="sky">Looking back</Eyebrow>
-    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "2.5rem", fontWeight: 600 }} className="mt-2 mb-6">
-      What we learned along the way.
+    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "3rem", fontWeight: 600 }} className="mt-3">
+      What we'd do differently.
     </motion.h2>
 
-    <div className="grid grid-cols-2 gap-5 flex-1">
-      {/* Left column */}
-      <div className="flex flex-col gap-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-          className="rounded-xl bg-amber-50 border border-amber-200 p-4"
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle className="w-5 h-5 text-amber-600" />
-            <div style={{ fontWeight: 600, fontSize: "1.1rem" }} className="text-amber-800">The challenge</div>
-          </div>
-          <p className="text-neutral-700 text-sm" style={{ lineHeight: 1.5 }}>
-            Since there were no clear requirements, it placed higher demands on us than expected.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
-          className="rounded-xl bg-violet-100 border border-violet-300 p-4"
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <Lightbulb className="w-5 h-5 text-violet-700" />
-            <div style={{ fontWeight: 600, fontSize: "1.1rem" }} className="text-violet-800">The turning point</div>
-          </div>
-          <p className="text-neutral-700 text-sm" style={{ lineHeight: 1.5 }}>
-            Once the problem became clear, the direction of the project changed completely.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 0.65 } }}
-          className="rounded-xl bg-emerald-600 text-white p-4 shadow-lg"
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <CheckCircle2 className="w-5 h-5" />
-            <div style={{ fontWeight: 600, fontSize: "1.1rem" }}>Client satisfaction</div>
-          </div>
-          <p className="text-sm" style={{ lineHeight: 1.5 }}>
-            The final meeting with Per included him being very satisfied with the outcome and solution.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Right column */}
+    <div className="mt-10 flex-1 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 0.35 } }}
-        className="rounded-xl bg-white border border-neutral-200 p-5 shadow-md"
+        animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+        className="rounded-2xl bg-white border border-sky-200 p-8 shadow-xl max-w-4xl"
       >
-        <div className="flex items-center gap-2 mb-3">
-          <RefreshCw className="w-5 h-5 text-sky-600" />
-          <div style={{ fontWeight: 600, fontSize: "1.15rem" }} className="text-sky-800">What we'd do differently</div>
+        <div className="flex items-center gap-3 mb-6">
+          <RefreshCw className="w-7 h-7 text-sky-600" />
+          <div style={{ fontWeight: 600, fontSize: "1.5rem" }} className="text-sky-800">What we'd do differently</div>
         </div>
-        <div className="space-y-2.5 text-neutral-700 text-sm" style={{ lineHeight: 1.5 }}>
-          <div className="flex gap-2">
-            <div className="text-sky-600 shrink-0">•</div>
+        <div className="space-y-4 text-neutral-700" style={{ fontSize: "1.15rem", lineHeight: 1.6 }}>
+          <div className="flex gap-3">
+            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
             <div>Establish a clearer project plan early and follow it more consistently</div>
           </div>
-          <div className="flex gap-2">
-            <div className="text-sky-600 shrink-0">•</div>
+          <div className="flex gap-3">
+            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
             <div>Have more frequent internal meetings to improve alignment</div>
           </div>
-          <div className="flex gap-2">
-            <div className="text-sky-600 shrink-0">•</div>
+          <div className="flex gap-3">
+            <div className="text-sky-600 shrink-0" style={{ fontSize: "1.5rem" }}>•</div>
             <div>Spend more time defining the problem before moving into ideation, to avoid exploring ideas that aren't feasible in this context</div>
           </div>
         </div>
@@ -1234,8 +1188,6 @@ export const slides = [
   SlideVideo,
   SlideCode,
   SlideTeamwork,
-  SlideClosing,
-  SlideReflection,
 ];
 
 export const slideTitles = [
@@ -1250,6 +1202,4 @@ export const slideTitles = [
   "Prototype demo",
   "We coded it",
   "How we worked",
-  "Recommendations",
-  "Reflection",
 ];
