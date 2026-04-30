@@ -311,6 +311,11 @@ export const SlideEarlyIdeas = () => {
               <div style={{ fontWeight: 600, fontSize: "1.65rem" }}>{it.t}</div>
             </div>
             <div className="text-neutral-600" style={{ fontSize: "1.4rem" }}>{it.why}</div>
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "85%", transition: { delay: 0.6 + i * 0.08, duration: 0.4 } }}
+              className="absolute top-1/2 left-4 h-1 bg-[#DC2626] origin-left -rotate-2"
+            />
           </motion.div>
         ))}
       </div>
