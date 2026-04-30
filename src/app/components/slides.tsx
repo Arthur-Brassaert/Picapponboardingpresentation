@@ -927,18 +927,18 @@ export const SlideTeamwork = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-        className="rounded-2xl bg-white p-6 shadow-md border border-emerald-100"
+        className="rounded-2xl bg-white p-6 shadow-md border border-emerald-100 flex flex-col"
       >
-        <div className="uppercase tracking-widest mb-3" style={{ color: "#1A7340", fontSize: "1.4rem" }}>What worked</div>
-        <div className="space-y-2 text-neutral-700" style={{ fontSize: "1.5rem" }}>
+        <div className="uppercase tracking-widest mb-4" style={{ color: "#1A7340", fontSize: "1.4rem" }}>What worked</div>
+        <div className="flex-1 flex flex-col justify-around text-neutral-700" style={{ fontSize: "1.75rem" }}>
           {[
             "Strong, open communication",
             "Everyone owned their slice",
             "Five backgrounds = better solutions",
             "Iterative cycles late in the project",
           ].map((s) => (
-            <div key={s} className="flex gap-2">
-              <CheckCircle2 className="w-6 h-6 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
+            <div key={s} className="flex gap-3">
+              <CheckCircle2 className="w-7 h-7 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
             </div>
           ))}
         </div>
@@ -947,18 +947,18 @@ export const SlideTeamwork = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.35 } }}
-        className="rounded-2xl bg-white p-6 shadow-md border border-amber-100"
+        className="rounded-2xl bg-white p-6 shadow-md border border-amber-100 flex flex-col"
       >
-        <div className="uppercase tracking-widest mb-3" style={{ color: "#1A7340", fontSize: "1.4rem" }}>What was hard</div>
-        <div className="space-y-2 text-neutral-700" style={{ fontSize: "1.5rem" }}>
+        <div className="uppercase tracking-widest mb-4" style={{ color: "#1A7340", fontSize: "1.4rem" }}>What was hard</div>
+        <div className="flex-1 flex flex-col justify-around text-neutral-700" style={{ fontSize: "1.75rem" }}>
           {[
             "Open brief — slow to find direction",
             "Time spent on infeasible ideas",
             "Different working styles across cultures",
             "Late client validation on early ideas",
           ].map((s) => (
-            <div key={s} className="flex gap-2">
-              <AlertTriangle className="w-6 h-6 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
+            <div key={s} className="flex gap-3">
+              <AlertTriangle className="w-7 h-7 mt-0.5 shrink-0" style={{ color: "#1A7340" }} /> {s}
             </div>
           ))}
         </div>
@@ -967,18 +967,18 @@ export const SlideTeamwork = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
-        className="rounded-2xl bg-violet-600 text-white p-6 shadow-xl"
+        className="rounded-2xl bg-violet-600 text-white p-6 shadow-xl flex flex-col"
       >
-        <div className="uppercase tracking-widest opacity-80 mb-3" style={{ fontSize: "1.4rem" }}>Next time</div>
-        <div className="space-y-2" style={{ fontSize: "1.5rem" }}>
+        <div className="uppercase tracking-widest opacity-80 mb-4" style={{ fontSize: "1.4rem" }}>Next time</div>
+        <div className="flex-1 flex flex-col justify-around" style={{ fontSize: "1.75rem" }}>
           {[
             "Establish a clearer project plan from the start",
             "Have more frequent internal team meetings",
             "Spend more time on analysis before ideation",
             "Align early on what problem we are solving",
           ].map((s) => (
-            <div key={s} className="flex gap-2">
-              <RefreshCw className="w-6 h-6 mt-0.5 shrink-0" /> {s}
+            <div key={s} className="flex gap-3">
+              <RefreshCw className="w-7 h-7 mt-0.5 shrink-0" /> {s}
             </div>
           ))}
         </div>
