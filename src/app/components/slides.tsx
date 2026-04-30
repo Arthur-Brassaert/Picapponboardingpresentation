@@ -176,7 +176,7 @@ export const SlideCover = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 1 } }}
-          className="mt-8 flex gap-8 opacity-90"
+          className="mt-16 flex gap-8 opacity-90"
           style={{ fontSize: "1.5rem" }}
         >
           <div><span className="opacity-60">Client</span> · Per Anders Hovbom (PicApp Sweden AB)</div>
@@ -209,7 +209,7 @@ export const SlideProblem = () => (
       {...fadeUp}
       transition={{ delay: 0.1 }}
       style={{ fontSize: "5.5rem", fontWeight: 600, lineHeight: 1.1 }}
-      className="mt-3 max-w-4xl"
+      className="mt-3"
     >
       Users sign up. And then —{" "}
       <span style={{ color: "#1A7340" }}>nothing.</span>
@@ -311,11 +311,6 @@ export const SlideEarlyIdeas = () => {
               <div style={{ fontWeight: 600, fontSize: "1.65rem" }}>{it.t}</div>
             </div>
             <div className="text-neutral-600" style={{ fontSize: "1.4rem" }}>{it.why}</div>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "80%", transition: { delay: 0.6 + i * 0.08, duration: 0.4 } }}
-              className="absolute top-1/2 left-4 h-0.5 bg-rose-400 origin-left -rotate-3"
-            />
           </motion.div>
         ))}
       </div>
@@ -337,7 +332,7 @@ export const SlideEarlyIdeas = () => {
 export const SlideStepBack = () => (
   <SlideShell bg="from-neutral-50 via-white to-violet-50">
     <Eyebrow color="violet">The crisis meeting</Eyebrow>
-    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "5rem", fontWeight: 600, lineHeight: 1.05 }} className="mt-3 max-w-4xl">
+    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "5rem", fontWeight: 600, lineHeight: 1.05 }} className="mt-3">
       More features ≠ more active users — <span style={{ color: "#1A7340" }}>without user understanding.</span>
     </motion.h2>
 
@@ -418,7 +413,7 @@ export const SlideRealization = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
         style={{ fontSize: "7.5rem", fontWeight: 700, lineHeight: 1 }}
-        className="mt-4 max-w-5xl"
+        className="mt-4"
       >
         PicApp doesn't have an onboarding.
       </motion.div>
@@ -570,9 +565,6 @@ export const SlidePrototypesShow = () => (
           </motion.div>
         </div>
 
-        <div className="mt-4 text-neutral-600" style={{ fontSize: "1.5rem" }}>
-          Step-by-step screens · clear progress bar · low risk · easy to ship.
-        </div>
       </motion.div>
 
       <motion.div
@@ -603,10 +595,6 @@ export const SlidePrototypesShow = () => (
             />
           </motion.div>
         </div>
-
-        <div className="mt-4 opacity-90" style={{ fontSize: "1.5rem" }}>
-          Storytelling · interactive · breaks click-through habit · curious by design.
-        </div>
       </motion.div>
     </div>
   </SlideShell>
@@ -630,7 +618,7 @@ export const SlidePrototypesWhy = () => (
           <ThumbsUp className="w-9 h-9" style={{ color: "#1A7340" }} />
           <div style={{ fontWeight: 600, fontSize: "2.1rem" }}>Why the traditional works</div>
         </div>
-        <div className="space-y-2 text-neutral-700" style={{ fontSize: "1.5rem" }}>
+        <div className="space-y-2 text-neutral-700" style={{ fontSize: "1.65rem" }}>
           {[
             "Familiar UX — no learning curve",
             "Clear progress signal",
@@ -658,7 +646,7 @@ export const SlidePrototypesWhy = () => (
           <ThumbsUp className="w-9 h-9" />
           <div style={{ fontWeight: 600, fontSize: "2.1rem" }}>Why the unconventional works</div>
         </div>
-        <div className="space-y-2" style={{ fontSize: "1.5rem" }}>
+        <div className="space-y-2" style={{ fontSize: "1.65rem" }}>
           {[
             "Storytelling holds attention — fights skip behaviour",
             "Visible road = built-in Zeigarnik pull",
@@ -682,10 +670,10 @@ export const SlidePrototypesWhy = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1 } }}
       className="mt-6 border-l-4 pl-6 italic text-neutral-700 max-w-3xl"
-      style={{ borderLeftColor: "#1A7340", fontSize: "1.85rem" }}
+      style={{ borderLeftColor: "#1A7340", fontSize: "1.4rem" }}
     >
       "I like both — can you combine them?"
-      <span className="not-italic text-neutral-500 ml-2" style={{ fontSize: "1.5rem" }}>— Per Anders Hovbom</span>
+      <span className="not-italic text-neutral-500 ml-2" style={{ fontSize: "1.1rem" }}>— Per Anders Hovbom</span>
     </motion.blockquote>
   </SlideShell>
 );
@@ -867,7 +855,7 @@ export const SlideVideo = () => (
 export const SlideCode = () => (
   <SlideShell bg="from-neutral-50 via-white to-sky-50">
     <Eyebrow color="sky">Coding the final prototype</Eyebrow>
-    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "5rem", fontWeight: 600 }} className="mt-3">
+    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "4.5rem", fontWeight: 600 }} className="mt-3">
       We started building it — in two formats.
     </motion.h2>
 
@@ -882,9 +870,9 @@ export const SlideCode = () => (
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 + i * 0.12 } }}
           className="rounded-2xl bg-white p-6 shadow-md border border-neutral-200 flex flex-col"
         >
-          <Code2 className="w-12 h-12 mb-3" style={{ color: "#1A7340" }} />
-          <div style={{ fontSize: "3rem", fontWeight: 700 }}>{t.n}</div>
-          <div className="text-neutral-600 mt-2" style={{ fontSize: "1.75rem" }}>{t.d}</div>
+          <Code2 className="w-11 h-11 mb-3" style={{ color: "#1A7340" }} />
+          <div style={{ fontSize: "2.75rem", fontWeight: 700 }}>{t.n}</div>
+          <div className="text-neutral-600 mt-2" style={{ fontSize: "1.6rem" }}>{t.d}</div>
         </motion.div>
       ))}
     </div>
@@ -893,9 +881,9 @@ export const SlideCode = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.7 } }}
       className="mt-8 rounded-2xl bg-[#0F2419] text-[#7DC493] p-6 font-mono shadow-xl"
-      style={{ fontSize: "1.5rem" }}
+      style={{ fontSize: "1.35rem" }}
     >
-      <div className="flex items-center gap-2 text-neutral-400 mb-3" style={{ fontSize: "1.3rem" }}>
+      <div className="flex items-center gap-2 text-neutral-400 mb-3" style={{ fontSize: "1.15rem" }}>
         <span className="ml-2">OnboardingRoad.vue</span>
       </div>
       <div className="space-y-1">
@@ -920,7 +908,7 @@ export const SlideCode = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1.6 } }}
       className="mt-4 text-neutral-500"
-      style={{ fontSize: "1.6rem" }}
+      style={{ fontSize: "1.45rem" }}
     >
       Our approach: add road with car · add in the tiles · make tiles clickable · apply all information. Extra's: smoothed onboarding animation · implemented new homepage
     </motion.div>
@@ -931,7 +919,7 @@ export const SlideCode = () => (
 export const SlideTeamwork = () => (
   <SlideShell bg="from-violet-50 via-white to-fuchsia-50">
     <Eyebrow color="violet">How we worked</Eyebrow>
-    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "5rem", fontWeight: 600 }} className="mt-3">
+    <motion.h2 {...fadeUp} transition={{ delay: 0.1 }} style={{ fontSize: "4.5rem", fontWeight: 600 }} className="mt-3">
       Five countries. One project. Honest reflections.
     </motion.h2>
 
