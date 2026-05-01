@@ -26,6 +26,7 @@ import {
   HelpCircle,
   Map,
   ThumbsUp,
+  ExternalLink,
 } from "lucide-react";
 
 const fadeUp = {
@@ -821,40 +822,57 @@ export const SlideMerged = () => {
   );
 };
 
-// 9 — Video demo
-export const SlideVideo = () => (
-  <SlideShell bg="from-neutral-900 via-neutral-800 to-neutral-900">
-    <div className="flex-1 flex flex-col text-white pt-2 pb-4">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-        style={{ fontSize: "5rem", fontWeight: 700, lineHeight: 1 }}
-        className="text-center mb-4"
-      >
-        See it in action.
-      </motion.h2>
+// 9 — Live demo embed
+export const SlideVideo = () => {
+  const demoUrl = "https://picapp.devbit.be/onboarding";
+  return (
+    <SlideShell bg="from-[#0F2419] via-[#1A7340] to-[#0F2419]">
+      <div className="flex-1 flex flex-col text-white">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <div className="uppercase tracking-[0.3em] opacity-80" style={{ fontSize: "1.25rem" }}>
+              Live demo
+            </div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
+              style={{ fontSize: "3.5rem", fontWeight: 700, lineHeight: 1 }}
+              className="mt-2"
+            >
+              See it in action.
+            </motion.h2>
+          </div>
+          <motion.a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-3 rounded-full bg-white text-[#0F2419] px-6 py-3 shadow-xl"
+            style={{ fontSize: "1.5rem", fontWeight: 600 }}
+          >
+            <ExternalLink className="w-7 h-7" style={{ color: "#1A7340" }} />
+            Open in new tab
+          </motion.a>
+        </div>
 
-      {/* Video container */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1, transition: { delay: 0.4 } }}
-        className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-[#1A7340]"
-        style={{ height: "calc(100% - 80px)", width: "auto" }}
-      >
-        <video
-          className="h-full w-auto object-contain"
-          controls
-          autoPlay
-          loop
-          muted
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1, transition: { delay: 0.3 } }}
+          className="flex-1 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#7DC493] bg-white"
         >
-          <source src="/src/imports/2026-04-30_11-38-46_(online-video-cutter.com).mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </motion.div>
-    </div>
-  </SlideShell>
-);
+          <iframe
+            src={demoUrl}
+            title="PicApp onboarding demo"
+            className="w-full h-full"
+            style={{ border: 0 }}
+            allow="fullscreen"
+          />
+        </motion.div>
+      </div>
+    </SlideShell>
+  );
+};
 
 // 12 — We started to code it
 export const SlideCode = () => (
